@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'Work Sans';
+    src: url(assets/fonts/WorkSans-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(275, 100%, 97%); 
+    background-image: url(assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: 'Work Sans';
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+img, svg {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    color: hsl(292, 42%, 14%);
+    cursor: pointer;
+    background: transparent;
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border: none;
+}
+
+button:hover {
+    color: hsl(290, 88%, 50%);
+}
+
+.container {
+    background: hsl(0, 0%, 100%);
+    max-width: 800px;
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+.faq-headline {
+    display: flex;
+    gap: 2rem;
+}
+
+.faq-headline h1 {
+    color: hsl(292, 42%, 14%);
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.accordion-wrapper .accordion-item:not(:last-child) {
+    border-bottom: 2px solid hsl(275, 100%, 97%);
+}
+
+.accordion-item .icons img {
+    min-width: 30px;
+}
+
+.accordion-item .icons .minus-icon {
+    display: none;
+}
+
+.accordion-description {
+    background: hsl(0, 0%, 100%);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 200ms ease-in-out;
+}
+
+.accordion-description p {
+    color: hsl(292, 16%, 49%);
+    padding: 1.5rem 0;
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width: 540px) {
+    body {
+        background-image: url(assets/images/background-pattern-mobile.svg);
+    }
+}
+
