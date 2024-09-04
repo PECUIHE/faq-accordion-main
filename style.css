@@ -23,6 +23,25 @@ body {
     gap: 5px;
 }
 
+.accordion-card {
+    background: hsl(0, 0%, 100%);
+    max-width: 800px;
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+.faq-headline {
+    display: flex;
+    gap: 2rem;
+}
+
+.faq-headline h1 {
+    color: hsl(292, 42%, 14%);
+    font-size: 3rem;
+    font-weight: 700;
+}
+
 img, svg {
     max-width: 100%;
     display: block;
@@ -48,45 +67,26 @@ button:hover {
     color: hsl(290, 88%, 50%);
 }
 
-.container {
-    background: hsl(0, 0%, 100%);
-    max-width: 800px;
-    padding: 1.5rem;
-    margin: 1rem;
-    border-radius: 1rem;
-}
-
-.faq-headline {
-    display: flex;
-    gap: 2rem;
-}
-
-.faq-headline h1 {
-    color: hsl(292, 42%, 14%);
-    font-size: 3rem;
-    font-weight: 700;
-}
-
-.accordion-wrapper .accordion-item:not(:last-child) {
+.accordion-wrapper .accordion-question:not(:last-child) {
     border-bottom: 2px solid hsl(275, 100%, 97%);
 }
 
-.accordion-item .icons img {
+.accordion-question .icons img {
     min-width: 30px;
 }
 
-.accordion-item .icons .minus-icon {
+.accordion-question .icons .minus-icon {
     display: none;
 }
 
-.accordion-description {
+.accordion-answer {
     background: hsl(0, 0%, 100%);
     max-height: 0;
     overflow: hidden;
     transition: max-height 200ms ease-in-out;
 }
 
-.accordion-description p {
+.accordion-answer p {
     color: hsl(292, 16%, 49%);
     padding: 1.5rem 0;
 }
